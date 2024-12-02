@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="tictactoe(csscode).css" />
+  </head>
+  <body>
+    <!-- Message container for displaying win/loss messages -->
+    <div class="msg-container hide">
+      <p id="msg">YOU WON</p>
+    </div>
+
+    <h1>Tic Tac Toe</h1>
+
+    <!-- Container to hold the game and images -->
+    <div class="container">
+      <!-- Game grid for Tic-Tac-Toe -->
+      <div class="game">
+        <!-- Each button represents a box on the Tic-Tac-Toe grid -->
+        <button class="box" data-index="0"></button>
+        <button class="box" data-index="1"></button>
+        <button class="box" data-index="2"></button>
+        <button class="box" data-index="3"></button>
+        <button class="box" data-index="4"></button>
+        <button class="box" data-index="5"></button>
+        <button class="box" data-index="6"></button>
+        <button class="box" data-index="7"></button>
+        <button class="box" data-index="8"></button>
+      </div>
+    </div>
+
+    <!-- Start Game button positioned below the container -->
+    <button id="start-btn" class="start-game-button">Start Game</button>
+
+    <script src="tictactoe(javascriptcode).js"></script>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="style_memory.css" rel="stylesheet" />
+    <title>Mix-Or-Match</title>
+    <script src="script_memory.js" async></script>
+  </head>
+  <body>
+    <h1 class="page-tile">Mix-or-Match</h1>
+    <div class="overlay-text visible">Click to start</div>
+    <div id="game-over-text" class="overlay-text">GAME OVER</div>
+    <div id="victory-text" class="overlay-text">VICTORY</div>
+    <!--time + flips holder-->
+    <div class="game-container">
+      <div class="game-info-container">
+        <div class="game-info">Time <span id="time-remaining">100</span></div>
+        <div class="game-info">Flips <span id="flips">0</span></div>
+      </div>
+      <!--card 1-->
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="glasses" src="assets/images/detective-hat_red.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/images/bloody-knife_109.png" />
+        </div>
+      </div>
+      <!--card 2-->
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="glasses" src="assets/images/detective-hat_red.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/images/camera_91.png" />
+        </div>
+      </div>
+      <!--card 3-->
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="glasses" src="assets/images/detective-hat_red.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/images/gun_109.png" />
+        </div>
+      </div>
+      <!--card 4-->
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="glasses" src="assets/images/detective-hat_red.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/images/dagger_109.png" />
+        </div>
+      </div>
+      <!--card 5-->
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="glasses" src="assets/images/detective-hat_red.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/images/wrench_109.png" />
+        </div>
+      </div>
+      <!--card 6-->
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="glasses" src="assets/images/detective-hat_red.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/images/camera_91.png" />
+        </div>
+      </div>
+      <!--card 7-->
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="glasses" src="assets/images/detective-hat_red.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/images/bloody-knife_109.png" />
+        </div>
+      </div>
+      <!--card 8-->
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="glasses" src="assets/images/detective-hat_red.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/images/wrench_109.png" />
+        </div>
+      </div>
+      <!--card 9-->
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="glasses" src="assets/images/detective-hat_red.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/images/hammer_109.png" />
+        </div>
+      </div>
+      <!--card 10-->
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="glasses" src="assets/images/detective-hat_red.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/images/rope_109.png" />
+        </div>
+      </div>
+      <!--card 11-->
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="glasses" src="assets/images/detective-hat_red.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/images/gun_109.png" />
+        </div>
+      </div>
+      <!--card 12-->
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="glasses" src="assets/images/detective-hat_red.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/images/pocket-watch_88.png" />
+        </div>
+      </div>
+      <!--card 13-->
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="glasses" src="assets/images/detective-hat_red.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/images/rope_109.png" />
+        </div>
+      </div>
+      <!--card 14-->
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="glasses" src="assets/images/detective-hat_red.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/images/hammer_109.png" />
+        </div>
+      </div>
+      <!--card 15-->
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="glasses" src="assets/images/detective-hat_red.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/images/dagger_109.png" />
+        </div>
+      </div>
+      <!--card 16-->
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="glasses" src="assets/images/detective-hat_red.png" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/images/pocket-watch_88.png" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

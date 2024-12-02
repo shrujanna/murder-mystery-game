@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="onestyle.css" />
+    <title>Feedback Form</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Feedback Form</h1>
+      <form id="feedbackForm">
+        <textarea
+          id="feedback"
+          placeholder="Enter your feedback here..."
+        ></textarea>
+        <button type="submit">Submit Feedback</button>
+        <p id="successMessage" class="hidden">
+          Feedback submitted successfully!
+        </p>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("feedbackForm")
+        .addEventListener("submit", async (event) => {
+          event.preventDefault();
+          const feedback = document.getElementById("feedback").value;
+
+          const response = await fetch("/api/feedback", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ feedback }),
+          });
+
+          if (response.ok) {
+            document
+              .getElementById("successMessage")
+              .classList.remove("hidden");
+            document.getElementById("feedback").value = ""; // Clear the feedback field
+          }
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>game rules</title>
+    <style>
+      @font-face {
+        font-family: "Creepy";
+        src: url("fonts/Creepy.woff") format("woff"),
+          url("fonts/Creepy.woff2") format("woff2");
+      }
+
+      body {
+        text-align: center;
+        font-family: "Creepy", sans-serif; /* Use the custom font */
+        background-color: #923f43;
+        color: black;
+      }
+      h1 {
+        font-size: 4em;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        display: inline-block;
+        text-align: left;
+        font-size: 1.5em;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 2em;
+        font-family: "Creepy", sans-serif; /* Apply the Creepy font to the button */
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 90px;
+        right: 550px;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>GAME RULES:</h1>
+    <p>Follow the steps below to complete the level.</p>
+
+    <ul>
+      <li>
+        It is a two-player game where you are "X" and your opponent is "O". You
+        get to initiate the game!
+      </li>
+      <li>
+        The task is to be the first player to get three of your marks in a
+        row—horizontally, vertically, or diagonally.
+      </li>
+      <li>
+        The player who finishes this wins! In case of a loss or a draw, you will
+        land on a failure page.
+      </li>
+      <li>Click on the start button given to get started!</li>
+    </ul>
+
+    <button
+      class="btn"
+      onclick="window.location.replace('tictactoe(htmlcode).html')"
+    >
+      start game
+    </button>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Butcherman&family=Creepster&family=Denk+One&family=Nosifer&display=swap"
+      rel="stylesheet"
+    />
+    <title>Level 1</title>
+    <style>
+      /* Ensures the body takes full height and the content is centered */
+      body {
+        background: url("assets/images/murder_mystery_background_design__by_snotrocket1944_dgln709-pre.jpg")
+          no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0; /* Removes default margin */
+      }
+
+      h1 {
+        font-family: "Denk One", sans-serif;
+        text-align: center;
+        color: #780606;
+        margin-bottom: 20px; /* Adds space between the text and the button */
+      }
+
+      button {
+        border-radius: 8px;
+        padding: 1rem 2rem; /* Increases button size */
+        background-color: #780606;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 24px; /* Increases font size */
+        font-family: "Denk One", sans-serif;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow effect to the button */
+        transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+        cursor: pointer; /* Adds a pointer on hover */
+      }
+
+      button:hover {
+        background-color: #a20808; /* Changes color on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ALMOST THERE!</h1>
+    <button onclick="window.location.href = '../pacman/instructions.html'">
+      LEVEL 3
+    </button>
+  </body>
+</html>

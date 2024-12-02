@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="load_style.css" rel="stylesheet">
+    <style>
+        @font-face {
+        font-family: "who asks satan";
+        src: url("fonts/otherfont/who asks satan.ttf") format("truetype");
+      }
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #030000;
+  animation: animateBg 10% linear infinite;
+}
+
+.loader {
+    position: absolute;
+  margin-top: 280px;
+}
+
+@keyframes animateBg {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+section .loader {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+}
+section .loader span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(18deg * var(--i)));
+}
+
+section .loader span::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: rgb(245, 83, 68);
+  box-shadow: 0 0 10px rgb(245, 83, 68), 0 0 20px rgb(245, 83, 68), 0 0 40px rgb(245, 83, 68),
+    0 0 60px rgb(245, 83, 68), 0 0 80px rgb(245, 83, 68), 0 0 100px rgb(245, 83, 68);
+  animation: animate 2s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(1);
+  }
+  80%,
+  100% {
+    transform: scale(0);
+  }
+
+}
+
+p{
+    top:110px;
+    color: rgb(245, 83, 68);
+    font-family: "who asks satan";
+    position: absolute;
+    font-size: 150px;
+}
+
+    </style>
+</head>
+<body>
+    <section>
+        <p >MURDER   MYSTERY   GAME</p>
+
+        <div class="loader">
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+            <span style="--i:4;"></span>
+            <span style="--i:5;"></span>
+            <span style="--i:6;"></span>
+            <span style="--i:7;"></span>
+            <span style="--i:8;"></span>
+            <span style="--i:9;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+        <div>
+    </section>
+    <script>
+      
+      setTimeout(() => {
+          window.location.href = "http://localhost:3000/";
+      }, 5000);
+  </script>
+</body>
+</html>

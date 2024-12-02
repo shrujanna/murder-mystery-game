@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Butcherman&family=Creepster&family=Denk+One&family=Nosifer&display=swap"
+      rel="stylesheet"
+    />
+    <title>Feedback Form</title>
+    <style>
+      body {
+        font-family: "Denk One", sans-serif;
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url("assets/images/murder_mystery_background_design__by_snotrocket1944_dgln709-pre.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .form-container {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .form-container h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        margin-bottom: 10px;
+        color: #555;
+        font-weight: bold;
+      }
+
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: none;
+        margin-bottom: 15px;
+        font-size: 14px;
+        box-sizing: border-box;
+      }
+
+      button {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-bottom: 10px;
+        color: #fff;
+        font-family: "Denk One", sans-serif;
+      }
+
+      button[type="submit"] {
+        background-color: #4caf50;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      button[type="button"] {
+        background-color: #f44336;
+      }
+
+      button[type="button"]:hover {
+        background-color: #d32f2f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Feedback Form</h2>
+      <form id="feedbackForm">
+        <label for="feedback">Please give us your Feedback: </label>
+        <textarea
+          id="feedback"
+          name="feedback"
+          rows="4"
+          placeholder="Enter your feedback here..."
+          required
+        ></textarea>
+        <button type="submit">Submit Feedback</button>
+        <!-- Changed type="submit" to type="button" -->
+        <button type="button" onclick="logout()">Logout</button>
+      </form>
+    </div>
+
+    <script>
+      function logout() {
+        localStorage.removeItem("jwt");
+        window.location.href = "http://localhost:3000/"; // Replace with your desired URL
+      }
+
+      const form = document.getElementById("feedbackForm");
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const feedbackText = document.getElementById("feedback").value;
+
+        try {
+          const response = await fetch("http://localhost:5000/api/feedback", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ feedback: feedbackText }),
+          });
+
+          const result = await response.json();
+          if (response.ok) {
+            alert("Feedback submitted successfully!");
+            document.getElementById("feedback").value = ""; // Clear feedback field
+          } else {
+            alert(`Error: ${result.message}`);
+          }
+        } catch (error) {
+          alert("There was an error submitting the feedback.");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Denk One", sans-serif;
+  display: flex;
+  height: 100vh;
+}
+
+.img {
+  width: 50%; /* The image takes up half the screen width */
+  height: 100vh; /* The image will fill the vertical height of the screen */
+  object-fit: cover; /* Ensures the image covers the entire area without distortion */
+}
+
+.content {
+  width: 50%; /* Content (title + paragraph) takes the other half of the screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  padding: 2rem;
+  position: relative; /* This allows the button to be positioned within the content div */
+}
+
+.title {
+  font-size: 2rem;
+  color: #780606;
+  text-align: center;
+  font-family: "Nosifer", sans-serif;
+  margin-bottom: 1rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Adds a shadow effect to the title */
+}
+
+.para {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: white; /* Dark red color for "Detective Harper" */
+  font-weight: bold;
+  font-size: 1.4rem;
+  font-family: "Denk One", sans-serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adds a shadow effect for emphasis */
+}
+
+/* Button Styling */
+.btn {
+  position: absolute; /* Position button relative to its container */
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  background-color: #780606;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Denk One", sans-serif;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow effect to the button */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn:hover {
+  background-color: #550404; /* Darken button color on hover */
+}
+
+/* Additional styling for the paragraph text */
+.para p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .img {
+    width: 100%; /* Image takes full width on smaller screens */
+    height: 50vh;
+  }
+
+  .content {
+    width: 100%; /* Content takes full width on smaller screens */
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2rem; /* Adjusts title size on smaller screens */
+  }
+
+  .para {
+    font-size: 1rem;
+  }
+
+  .highlight {
+    font-size: 1.2rem; /* Adjusts the size of "Detective Harper" on smaller screens */
+  }
+
+  .btn {
+    bottom: 10px; /* Adjust button position on smaller screens */
+    right: 10px;
+  }
+}

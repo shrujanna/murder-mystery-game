@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Murder Mystery Game Instructions</title>
+    <style>
+      @font-face {
+        font-family: "Creepy";
+        src: url("fonts/Creepy.woff") format("woff"),
+          url("fonts/Creepy.woff2") format("woff2");
+      }
+
+      body {
+        background-image: url("bg_image.png"); /* Replace with your image path */
+        background-size: cover; /* Ensures the image covers the entire body */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        background-position: center; /* Centers the image */
+        height: 100vh; /* Makes the body fill the viewport height */
+        margin: 0; /* Removes default margin */
+        color: white; /* Changes text color for better visibility */
+        font-family: "Creepy", Arial, sans-serif; /* Use the Creepy font */
+        display: flex; /* Enables flexbox for centering */
+        justify-content: center; /* Centers horizontally */
+        align-items: center; /* Centers vertically */
+        flex-direction: column; /* Aligns the text vertically */
+        text-align: center; /* Centers text inside */
+        padding: 20px; /* Adds padding around the text */
+      }
+
+      h1 {
+        font-size: 48px; /* Increase font size for the main heading */
+        margin: 20px 0; /* Adds more space above and below */
+      }
+
+      h2 {
+        font-size: 36px; /* Increase font size for subheading */
+        margin: 15px 0;
+      }
+
+      p {
+        font-size: 22px; /* Increase font size for paragraph text */
+        margin: 15px 0;
+        line-height: 1.6; /* Add line spacing for better readability */
+      }
+
+      #startGameBtn {
+        padding: 15px 30px; /* Increases padding for a larger button */
+        font-size: 20px; /* Increase font size for the button text */
+        cursor: pointer; /* Changes cursor to pointer on hover */
+        font-family: "Creepy", Arial, sans-serif; /* Use the Creepy font for button text */
+        margin-top: 20px; /* Adds space above the button */
+        background-color: transparent; /* Makes button transparent */
+        border: 2px solid white; /* Adds a border to the button */
+        color: white; /* Button text color */
+      }
+
+      #startGameBtn:hover {
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.1
+        ); /* Changes button background color on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="instructions">
+      <h1>INSTRUCTION</h1>
+      <h2>Welcome, Detective!</h2>
+      <p>Here’s what you need to do:</p>
+      <p>
+        You’ve been given the chance to solve a thrilling mystery, but first,
+        you must conquer three games, each with its own level. Success in all
+        three is crucial to catch the murderer, but beware—failure in any level
+        will lead you to a dead-end failure page. The good news? You can always
+        replay the game which you have lost to improve your chances! Are you
+        ready detective??? GOOD LUCK!!!
+      </p>
+      <button id="startGameBtn">Start Game</button>
+    </div>
+  </body>
+</html>

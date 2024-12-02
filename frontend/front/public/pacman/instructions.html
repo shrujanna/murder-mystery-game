@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Butcherman&family=Creepster&family=Denk+One&family=Nosifer&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @font-face {
+        font-family: "who asks satan";
+        src: url("fonts/otherfont/who asks satan.ttf") format("truetype");
+      }
+
+      body {
+        background-color: black;
+        font-family: "who asks satan";
+        color: rgb(245, 83, 68);
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 80px;
+      }
+
+      p {
+        font-size: 35px;
+      }
+
+      .btn {
+        font-size: 50px; /* Larger font size for button text */
+        font-family: "who asks satan";
+        padding: 20px 50px;
+        border: 1px solid rgb(245, 83, 68); /* Adds a solid red border */
+        outline: none;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 12px;
+        position: relative;
+        background-color: black;
+        transition: color 0.3s ease-in-out;
+        margin-top: 20px;
+      }
+
+      .btn::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        background: red;
+        z-index: -1;
+        border-radius: 12px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        filter: blur(6px);
+      }
+
+      /* Hover Effect */
+      .btn:hover::before {
+        opacity: 1;
+      }
+
+      .btn:hover {
+        color: #ffcccc;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>I n s t r u c t i o n s</h1>
+    <p>
+      1. Use the arrow keys (Up, Down, Left, Right) to navigate.<br />
+      2. Avoid the pink and red "Ghosts" to stay alive.<br />
+      3. Clear the maze by eating all pellets.<br />
+      4. The larger pellet is a <i><strong>Power-Up</strong></i
+      >.<br />
+      5. Eating the Power-Up turns ghosts blue for 5 seconds—you can eat the
+      ghosts and get rid of them when they are blue.<br />
+      6. Press the <i><strong>PLAY</strong></i> button to play the game.<br />
+      7.To <i><strong>pause</strong></i> the game press the "E S C" button and
+      to resume again press the "E S C" button on your keyboard <br /><br />You
+      have only <strong>one chance</strong> to complete this level. Good luck!
+    </p>
+    <button class="btn" onclick="window.location.replace('index.html')">
+      PLAY
+    </button>
+  </body>
+</html>

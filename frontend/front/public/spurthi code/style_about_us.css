@@ -1,0 +1,84 @@
+h1 {
+  text-align: center;
+  color: #780606;
+  font-family: "Nosifer", sans-serif;
+  font-size: 65px; /* Adjusted property name */
+  z-index: 2;
+}
+
+body {
+  background: url("assets/images/murder_mystery_background_design__by_snotrocket1944_dgln709-pre.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Adjust if needed */
+  flex-wrap: wrap;
+  z-index: 2;
+}
+
+.card {
+  width: 16rem; /* Reduced width for smaller cards */
+  border-radius: 0.5rem;
+  box-shadow: 0px 10px 8px #999;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  background-color: white;
+  height: fit-content;
+  position: relative;
+  padding-bottom: 2rem; /* Reduced padding */
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 12rem; /* Reduced height for smaller images */
+  object-fit: cover;
+}
+
+.card-title,
+.description {
+  margin: 0.75rem 5%; /* Adjusted margin for smaller sections */
+  text-align: center;
+  font-size: 18px; /* Reduced font size */
+}
+
+.description {
+  margin-bottom: 2rem; /* Adjusted bottom margin */
+}
+
+.card-btn {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%; /* Reduced width */
+  padding: 0.5rem 1rem; /* Smaller button */
+  background-color: #780606;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn {
+  border-radius: 8px;
+  padding: 1rem 2rem; /* Increases button size */
+  background-color: white;
+  color: #780606;
+  text-decoration: none;
+  text-align: center;
+  font-size: 24px; /* Increases font size */
+  font-family: "Denk One", sans-serif;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow effect to the button */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  cursor: pointer; /* Adds a pointer on hover */
+}

@@ -1,0 +1,50 @@
+@font-face{
+    font-family: "Lunacy";
+    src:url("assets/fonts/Lunacy.woff") format("woff"), url("assets/fonts/Lunacy.woff2") format("woff2");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(#5d5d64, #000);
+}
+
+.instructions {
+    font-family: Lunacy, serif;
+    color: #ffffff;
+    font-weight: normal;
+    text-align: center;
+    font-size: 6em;
+}
+
+.list-of-instructions {
+    font-family: Lunacy, serif;
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 3em;
+    text-align: center;
+}
+
+.instruction-item {
+    margin-bottom: 10px; /* Space between instruction items */
+    line-height: 1; /* Better line spacing for readability */
+}
+.button {
+    font-family: Lunacy, serif;
+    color: white; /* Change text color to white */
+    background-color: #ff5733; /* Bright background color */
+    text-align: center;
+    display: block; /* Make the button a block element */
+    margin: 20px auto; /* Center the button */
+    width: 200px; /* Set a width for the button */
+    padding: 15px; /* Add some padding for better appearance */
+    font-size: 2em; /* Adjust button text size */
+    border: none; /* Remove default border */
+    border-radius: 15px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}

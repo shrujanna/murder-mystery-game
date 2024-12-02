@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "who asks satan";
+  src: url("fonts/otherfont/who asks satan.ttf") format("truetype");
+}
+
+canvas {
+  margin-left: 370px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+}
+
+#score {
+  font-size: 60px;
+  position: absolute;
+  color: rgb(245, 83, 68);
+  font-family: "who asks satan", Arial;
+  left: 110px;
+}
+
+#esc {
+  top: 80px;
+  right: 300px;
+}

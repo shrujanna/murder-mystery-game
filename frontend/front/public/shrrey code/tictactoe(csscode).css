@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "Lunacy";
+  src: url("fonts/Lunacy.woff") format("woff"),
+    url("fonts/Lunacy.woff2") format("woff2");
+}
+
+* {
+  margin: 10;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and margin don't affect the element size */
+}
+
+body {
+  background-color: #84393d;
+  text-align: center;
+  font-family: "Lunacy", Arial, sans-serif; /* Default font with fallbacks */
+  color: #fff; /* Set text color to white */
+}
+
+.container {
+  height: 70vh;
+  display: flex;
+  justify-content: center; /* Center the game horizontally */
+  align-items: flex-start; /* Align items to the top */
+  position: relative; /* Allow absolute positioning for children */
+  padding: 20px; /* Add some padding for spacing */
+}
+
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #b0413e;
+  background-color: #ffffc7;
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  font-size: 4vmin; /* Adjusted font size for responsiveness */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.box:hover {
+  background-color: #ffe08b; /* Lighten on hover */
+}
+
+button:disabled {
+  background-color: #bbb; /* Gray out disabled buttons */
+  cursor: not-allowed; /* Show as disabled cursor */
+}
+
+/* Style for the Start Game button */
+.start-game-button {
+  font-family: "Lunacy", Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #ffffc7;
+  color: #84393d;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.start-game-button:hover {
+  background-color: #ffe08b;
+  color: #b0413e;
+}
+
+/* Message container for Win/Draw */
+.msg-container {
+  position: fixed; /* Fixed position to make it pop up over the game */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset to perfectly center */
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  color: #ffffc7; /* Light text for readability */
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000; /* Ensure it's above all other content */
+  display: none; /* Hidden by default */
+}
+
+.msg-container.show {
+  display: block; /* Show message container when active */
+}
+
+#msg {
+  font-size: 50px; /* Make the message text bigger */
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Hide any sections by default */
+.hide {
+  display: none; /* Hide sections by default */
+}
+
+/* Title styling */
+h1 {
+  font-size: 5rem; /* Adjust the font size of the title */
+  font-weight: bold; /* Make it bold */
+  color: #ffffc7; /* Light yellow color for contrast */
+  margin-top: 20px; /* Space from the top of the page */
+  margin-bottom: 20px; /* Space below the title */
+}

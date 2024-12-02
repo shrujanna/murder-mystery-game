@@ -1,0 +1,199 @@
+/* Define the fonts */
+@font-face{
+    font-family: "Creepy";
+    src:url("assets/fonts/Creepy.woff") format("woff"), url("assets/fonts/Creepy.woff2") format("woff2");
+}
+@font-face{
+    font-family: "Lunacy";
+    src:url("assets/fonts/Lunacy.woff") format("woff"), url("assets/fonts/Lunacy.woff2") format("woff2");
+}
+
+/* Basic setup */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+    cursor: url("assets/cursor/magnifying_glass.cur"), auto;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(#5d5d64, #000);
+}
+
+/* Page title styling */
+.page-tile {
+    color: #780606;
+    font-family: Creepy, serif;
+    font-weight: normal;
+    text-align: center;
+    font-size: 6em;
+}
+
+/* Game info container */
+.game-info-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+}
+.game-info {
+    font-family: Lunacy, serif;
+    color: white;
+    font-size: 4em;
+}
+
+/* Game container styling */
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    margin: 50px;
+    justify-content: center;
+}
+
+/* Card styles */
+.card {
+    position: relative;
+    height: 175px;
+    width: 125px;
+    perspective: 1000px; /* Add perspective for 3D effect */
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    border-width: 2px;
+    border-style: solid;
+    backface-visibility: hidden; /* Hides the back side when rotated */
+    transition: transform 0.6s ease;
+}
+
+/* Hover effect applied only to card-value */
+.card-front:hover .card-value {
+    transform: scale(1.1); /* Slight increase on hover */
+    transition: transform 300ms ease-in-out; /* Smooth transition */
+    animation: dance 1s linear infinite 500ms; /* Animation added here */
+}
+.card.matched .card-front .card-value{
+    animation: dance 1s linear infinite 500ms;
+}
+
+/* Card value styles */
+.card-value {
+    font-size: 2em;
+    color: white;
+    transform: scale(1); /* Initial scale */
+    transition: transform 300ms ease-in-out;
+}
+
+.card-front {
+    background-color: #780606; /* Ensure background is present */
+    border-color: #000; /* Set border color to ensure visibility */
+    transform: rotateY(180deg); /* Initially flipped */
+    z-index: 1; /* Lower z-index keeps it behind */
+}
+
+/* Fix for background and border not showing */
+.card-front.visible {
+    background-color: #780606; /* Visible background color */
+    border-color: #000; /* Visible border color */
+    border-width: 2px;
+}
+
+.card-back {
+    transform: rotateY(0); /* Initially visible */
+    z-index: 2; /* Higher z-index brings it forward */
+    background-color: #000;
+    border-color: #780606;
+}
+
+/* When the card is flipped */
+.card.visible .card-back {
+    transform: rotateY(180deg); /* Flip the back */
+    z-index: 1; /* Push back */
+}
+.card.visible .card-front {
+    transform: rotateY(0); /* Show the front */
+    z-index: 2; /* Bring forward */
+}
+.overlay-text{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: #780606;
+    font-family: Creepy, serif;
+}
+.overlay-text-small{
+    font-size: .3em;
+}
+
+.overlay-text.visible{
+    display: flex;
+    flex-direction: column;
+    animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow {
+    from{
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+    }
+    to{
+        background-color: rgba(0, 0, 0, .8);
+        font-size: 10em;
+
+    }
+
+    
+}
+
+/* Animation keyframes for the dance */
+@keyframes dance {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(-30deg);
+    }
+    75% {
+        transform: rotate(30deg);
+    }
+}
+
+/* Style the image */
+.card-back img {
+    max-width: 80%;  /* Ensure image fits within card */
+    max-height: 80%; /* Adjust size as needed */
+}
+
+/* Glasses animation */
+.glasses {
+    transform: translateY(-10px);
+    transition: transform 100ms ease-in-out;
+}
+
+.card-back:hover .glasses {
+    transform: translateY(0);
+}
+@media (max-width: 600px){
+    .game-container{
+        grid-template-columns: repeat(2, auto);
+    }
+    .game-info-container{
+        flex-direction: column;
+        align-items: center;
+    }
+}

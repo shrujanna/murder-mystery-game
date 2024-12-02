@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Victory Screen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Butcherman&family=Creepster&family=Denk+One&family=Nosifer&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-image: url("assets/images/murder_mystery_background_design__by_snotrocket1944_dgln709-pre.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-color: rgb(0, 0, 0);
+        margin: 0;
+        padding: 0;
+        font-family: "Denk One", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+      }
+
+      .title {
+        font-size: 5rem; /* Increased font size */
+        color: #780606;
+        font-family: "Nosifer", sans-serif;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.5rem;
+        color: aliceblue;
+        margin-bottom: 30px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 20px; /* Space between buttons */
+      }
+
+      button {
+        font-size: 30px;
+        color: white;
+        background-color: #333;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-family: "Denk One", sans-serif;
+      }
+
+      button:hover {
+        background-color: #555; /* Add hover effect */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title">VICTORY!</div>
+    <p>Good job detective. You caught the murderer!</p>
+    <div class="buttons">
+      <button
+        onclick="window.location.replace('../shrrey code/rules_for_tictactoe(html_and_inline_css).html')"
+      >
+        PLAY
+      </button>
+      <button onclick="window.location.replace('about_us.html')">EXIT</button>
+    </div>
+  </body>
+</html>
